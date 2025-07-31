@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모이소</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* Allow scrolling if content overflows */
+            font-family: 'Noto Sans KR', sans-serif;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            min-height: 100%;
+            position: relative;
+            background-image: url('블로그배경_모이소_모바일_-001.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 40px 0;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .main-content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            max-width: 800px;
+            width: 90%;
+        }
+
+        .main-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            margin-bottom: 30px;
+            background-color: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .button {
+            padding: 15px 40px;
+            border: 2px solid white;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 400;
+            transition: background-color 0.3s, color 0.3s;
+            border-radius: 8px;
+        }
+
+        .button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        @media (max-width: 768px) {
+            .main-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .button-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .button {
+                width: 80%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <h1>제주감성 다 모여있소, 모이소</h1>
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/rAeTy4g5lS0" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="button-container">
+                <a href="brand.html" class="button">브랜드 소개</a>
+                <a href="https://smartstore.naver.com/jejumoiso" target="_blank" class="button">쇼핑몰</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
